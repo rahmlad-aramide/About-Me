@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <h2 class="logo">Dev. Rahmlad</h2>
+        <ul>
+          <li><a href="index.html">About Me</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="#" class="active">Register</a></li>
+        </ul>
+      </nav>
+      <main class="register">
+
+        <div class="heading-content">
+            <h2 class="heading">Register</h2> 
+            <div class="heading-decoration"></div>
+        </div>
+    <form action="POST" class="register-form">
+        <div>
+            <label for="fname">First Name</label> <br>
+            <input id="fname" type="text" required placeholder="Enter your first name">
+        </div>
+        <div>
+            <label for="lname">Last Name</label> <br>
+            <input id="lname" type="text" required placeholder="Enter your last name">
+        </div>
+        <div>
+            <label for="phone">Phone</label> <br>
+            <input id="phone" type="tel" required placeholder="Enter your phone number">
+        </div>
+        <div>
+            <label for="gender">Gender</label> <br>
+            <select name="gender" id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Prefers not to say">Prefers not to say</option>
+            </select>
+        </div>
+        <div>
+            <label for="country">Country</label> <br>
+            <input id="country" type="text" required placeholder="Which country are you from?">
+        </div>
+        <div>
+            <label for="state">State/Province</label> <br>
+            <input id="state" type="text" required placeholder="Enter your state/province">
+        </div>
+        <div>
+            <label for="username">Username</label> <br>
+            <input type="text" name="username" id="username">
+        </div>
+        <div>
+            <label for="password">Password</label> <br>
+            <input type="password" name="password" id="password">
+        </div>
+        <div>
+            <label for="conf-password">Confirm Password</label> <br>
+            <input type="conf-password" name="conf-password" id="conf-password">
+        </div>
+        <div>
+            <input type="button" value="SIGN UP" />
+          </div>
+    </form>
+</main>
+<footer class="footer">
+    &copy; <a href="rahmlad-aramide.github.io/my-portfolio"> Dev. Rahmlad </a> - 2022
+</footer>
+</body>
+</html>
