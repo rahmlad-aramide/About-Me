@@ -403,7 +403,7 @@ input:focus{
         padding:1rem 0;
         height: 100%;
     }
-    .table {
+    .table:not(.animate-calculator) {
         height: 100%;
         padding-left: 5rem;
     }
