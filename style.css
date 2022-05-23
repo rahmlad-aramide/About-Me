@@ -63,6 +63,7 @@ section.about {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    
 }
 .about-image{
     display: flex;
@@ -77,6 +78,16 @@ section.about {
     flex-direction: column;
     align-items: center;
 }
+.about-heading{
+    animation-name: textSlideDown;
+    animation-duration: 3s;
+    transition: ease-in;
+}
+.register-heading, .login-heading, .calculator-heading {
+    animation-name: textSlideIn;
+    animation-duration: 3s;
+    transition: ease-in;
+}
 .heading-decoration {
     width: 3rem;
     height: 2px;
@@ -85,11 +96,21 @@ section.about {
 .about-me, .goal{
     margin: 0 2rem;
 }
+.about-me {
+    animation-name: textSlideIn;
+    animation-duration: 3s;
+    transition: ease-in;
+}
 .about-me h1 {
     font-size: 2rem;
 }
 .about-me a {
     color: var(--clr-light);
+}
+.goal, .animate-calculator {
+    animation-name: textSlideUp;
+    animation-duration: 3s;
+    transition: ease-in;
 }
 .goal p {
     font-weight: 100;
@@ -99,6 +120,9 @@ section.about {
     background-color: var(--clr-primary);
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
+    animation-name: imgSlideIn;
+    animation-duration: 3s;
+    transition: ease-in;
 }
 .image-bg > img {
     padding: 2rem 2rem 0 2rem;
@@ -193,13 +217,23 @@ th, td {
 }
 .register, .login, .contact{
     height: 100%;
+    
 }
-.contact-div, .login-div, .register-div{
+.contact-div, .login-div{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 80vw;
+    animation-name: textSlideUp;
+    animation-duration: 3s;
+    transition: ease-in;
+}
+
+.register-form {
+    animation-name: textSlideUp;
+    animation-duration: 3s;
+    transition: ease-in;
 }
 .contact {
     width: 100%;
@@ -346,6 +380,7 @@ input:focus{
     }
 }
 @media (max-width:600px){
+    
     body{
         width: 100%;
     }
@@ -370,6 +405,7 @@ input:focus{
     }
     .table {
         height: 100%;
+        padding-left: 5rem;
     }
     .table-heading {
         margin: 1rem;
@@ -388,5 +424,41 @@ input:focus{
     }
     section.about {
         padding-top: 1.5rem;
+    }
+}
+@keyframes imgSlideIn {
+    0% {
+        margin-left: 100%;
+    }
+    
+    100% {
+        margin-left: 0%;
+    }
+}
+@keyframes textSlideIn {
+    0% {
+        margin-left: -100%;
+    }
+    
+    100% {
+        margin-right: 0;
+    }
+}
+@keyframes textSlideUp {
+    0% {
+        margin-top: 100%;
+    }
+    
+    100% {
+        margin-top: 0%;
+    }
+}
+@keyframes textSlideDown {
+    0% {
+        margin-bottom: 100%;
+    }
+    
+    100% {
+        margin-bottom: 0%;
     }
 }
