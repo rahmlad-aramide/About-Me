@@ -125,6 +125,11 @@ section.about {
     width: 100%;
     overflow-x: auto;
 }
+.table-width {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .table-heading {
     margin: 0 0 1rem 0;
 }
@@ -177,15 +182,16 @@ th, td {
 /* Contact Page */
 .contact, .login, .register, .calculator {
     background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
-    height: 100vh;
     color: var(--clr-light);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 5rem;
-    overflow-y: auto;
 }
-.register, .login {
+.calculator {
+    height: 90vh;
+}
+.register, .login, .contact{
     height: 100%;
 }
 .contact-div, .login-div, .register-div{
@@ -195,6 +201,10 @@ th, td {
     align-items: center;
     width: 80vw;
 }
+.contact {
+    width: 100%;
+    padding-top: 2rem;
+}
 .login-div {
     height: 67vh;
 }
@@ -203,9 +213,13 @@ label {
 }
 form {
     margin: 0 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 form > div {
     margin: .8rem 0;
+    width: 100%;
 }
 input, select {
     width: 40vw;
@@ -315,6 +329,7 @@ input:focus{
         justify-content: center;
         flex-direction: column;
     }
+    
     .education .table {
         width: 100%;
         overflow-x: auto;
@@ -325,10 +340,6 @@ input:focus{
     }
     form {
         width: 90%;
-    }
-    .nav-bg {
-        padding: 2rem;
-        height: 1vh;
     }
     .footer {
         height: 10rem;
