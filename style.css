@@ -42,6 +42,9 @@
     transition-delay: 10ms;
     transition-duration: 10ms;
 }
+.mobile-nav {
+    display: none;
+}
 section.about {
     height: 100vh;
     padding-top: 5.5rem;
@@ -182,6 +185,9 @@ th, td {
     padding-top: 5rem;
     overflow-y: auto;
 }
+.register, .login {
+    height: 100%;
+}
 .contact-div, .login-div, .register-div{
     display: flex;
     flex-direction: column;
@@ -189,7 +195,9 @@ th, td {
     align-items: center;
     width: 80vw;
 }
-
+.login-div {
+    height: 67vh;
+}
 label {
     font-size: 1.2rem;
 }
@@ -221,15 +229,24 @@ input:focus{
     border-bottom: 2px solid var(--clr-primary);
 }
 .calculator-table {
-    margin-top: 1rem;
+    margin: 1.5rem 0 .5rem;
 }
 .calculator-table, .calculator-table td {
     border: 2px solid var(--clr-light);
-
 } 
-.calculator-table td {
-    padding: 1.5rem;
+.calculator-table th {
+    border: none;
+    padding: 1.8rem 1.2rem;
 }
+.calculator-table td:not(.ac){
+    padding: 1.2rem;
+}
+.calculator-table td:hover {
+    color: var(--clr-dark);
+    background-color: var(--clr-light);
+}
+
+
 .footer {
     display: flex;
     height: 4rem;
@@ -241,4 +258,125 @@ input:focus{
 .footer > a {
     color: var(--clr-light);
     padding: 0 .3rem;
+}
+@media (max-width: 990px){
+    .navbar ul {
+        display: none;
+    }
+    .center-nav {
+        display: flex;
+        justify-content: center;
+    }
+    .mobile-nav {
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        bottom: 0;
+        z-index: 1;
+        display: flex;
+        backdrop-filter: blur(5px);
+        background-color: var(--clr-primary-transparent-99);
+        padding: 1rem;
+        border-radius: 2rem;
+        width: 60%;
+    }
+    .mobile-nav > ul {
+        align-items: center;
+
+    }
+    .mobile-nav > ul > li {
+        display: inline-block;
+      }
+     .mobile-nav h2,.mobile-nav a  {
+          color: var(--clr-light);
+          margin: 0 .5rem
+      }
+      
+     .mobile-nav > ul > li:hover {
+          background-color: var(--clr-primary-transparent);
+      }
+
+      .navbar a:hover {
+          text-decoration: underline;
+          transition: ease;
+          transition-delay: 10ms;
+          transition-duration: 10ms;
+      }
+    .mobile-nav > ul {
+        display: flex;
+        justify-content: center;
+    }
+    .education {
+        align-items: center;
+    }
+    .table-width {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .education .table {
+        width: 100%;
+        overflow-x: auto;
+        display: flex;
+    }
+    .contact-div, .login-div, .register-div{
+        width: 90%;
+    }
+    form {
+        width: 90%;
+    }
+    .nav-bg {
+        padding: 2rem;
+        height: 1vh;
+    }
+    .footer {
+        height: 10rem;
+        padding-bottom: 3rem;
+    }
+}
+@media (max-width:600px){
+    body{
+        width: 100%;
+    }
+    .navbar {
+        width: 100%;
+    }
+    main {
+        width: 100%;
+    }
+    .about-image {
+        display: none;
+    }
+    .about-details{
+        width: 100%;
+    }
+    input, select {
+        width: 100%;
+    }
+    .hobbies, .education, .experience {
+        padding:1rem 0;
+        height: 100%;
+    }
+    .table {
+        height: 100%;
+    }
+    .table-heading {
+        margin: 1rem;
+    }
+    table.education-table {
+        width: 100%;
+        margin: 1rem 2rem;
+        overflow-x: scroll;
+    }
+    .experience-images {
+        /* height: 10rem; */
+        width: 100%;
+    }
+    .experience-image img {
+        height: 3rem;
+    }
+    section.about {
+        padding-top: 1.5rem;
+    }
 }

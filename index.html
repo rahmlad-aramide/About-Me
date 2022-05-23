@@ -7,6 +7,7 @@
     <title>About Me</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/bd76c37180.js"></script>
 </head>
 <body>
     <nav class="navbar">
@@ -18,6 +19,24 @@
             <li><a href="register.html">Register</a></li>
         </ul>
     </nav>
+<div class="center-nav">
+    <nav class="mobile-nav">
+        <ul>
+            <li> <a href="#" class="active">
+                <i class="fa fa-home fa-3x" aria-hidden="true"></i></i>
+            </a> </li>
+            <li><a href="contact.html">
+                <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+            </a></li>
+            <li><a href="login.html">
+                <i class="fa fa-sign-in fa-2x" aria-hidden="true"></i>
+            </a></li>
+            <li><a href="register.html">
+                <i class="fa fa-user-plus fa-2x" aria-hidden="true"></i>
+            </a></li>
+        </ul>
+    </nav>
+</div>
     <main>
         <section class="about">
             <div class="about-details">
@@ -52,9 +71,10 @@
                 <h2 class="heading">Education</h2>
                 <div class="heading-decoration"></div>
             </div>
-            <div class="table">
+    <div class="table-width">
             <h3 class="table-heading">Here's a list of my current and past education:</h3>
-            <table>
+        <div class="table">
+            <table class="education-table">
                 <thead>
                     <th>Institution</th>
                     <th>Course/Type</th>
@@ -89,6 +109,7 @@
                 </tbody>
             </table>
         </div>
+    </div>
         </section>
         <section class="experience">
             <div class="heading-content">
