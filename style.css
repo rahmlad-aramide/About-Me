@@ -213,7 +213,14 @@ th, td {
     padding-top: 5rem;
 }
 .calculator {
-    height: 90vh;
+    height: 100%;
+    padding-bottom: 1rem;
+}
+.calculator p {
+    margin-top: .5rem;
+}
+p > a {
+    color: var(--clr-light);
 }
 .register, .login, .contact{
     height: 100%;
@@ -308,6 +315,19 @@ input:focus{
     padding: 0 .3rem;
 }
 @media (max-width: 990px){
+    .about {
+        display: flex;
+        justify-content: space-evenly;
+        background: url(img/hero.png);
+        background-size: cover;
+        background-position-y: 5rem;
+        background-repeat: no-repeat;
+        background-blend-mode: soft-light;
+        background-color: #0d0d0d90;
+        /* background: linear-gradient(to left, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.5)), url(/img/hero.png) center top; */
+        width: 100%;
+        color: var(--clr-light);
+      }
     .navbar ul {
         display: none;
     }
@@ -380,7 +400,6 @@ input:focus{
     }
 }
 @media (max-width:600px){
-    
     body{
         width: 100%;
     }
